@@ -1,9 +1,29 @@
+require "RMagick"
+include Magick
+
 class WelcomeController < ApplicationController
   def index
-    @user = Hash.new
-    @user[:name] = "Maki Nishikino"
-    @user[:username] = "Maki Nishikino"
-    @user[:location] = "Otonokizaka, Japan"
-    @user[:about] = "Imiwakannai"
+    # @user = Hash.new
+    # @user[:name] = "Maki Nishikino"
+    # @user[:username] = "Maki Nishikino"
+    # @user[:location] = "Otonokizaka, Japan"
+     
+    @hex_matrix = []
+    
+    img = ImageList.new("image/after.png")
+    for y in 0..img.rows
+      hex_arr = []
+      for x in 0..img.columns
+        src = img.pixel_color(x,y)
+    
+        rgb = [src.red/256, src.green/256, src.blue/256]
+        hex = rgb.inject(""){|result, elem| result + elem.to_s(16)}
+    
+        hex_arr << hex
+      end
+      @hex_matrix << hex_arr
+    end
+
+    # @hex_matrix = ["FF0000", "00FF00", "0000FF"]
   end
 end

@@ -13,26 +13,32 @@ $(function(){
 });
 </script>
 
-<span style="color:#ff0000">真</span>
-<span style="color:#00ff00">姫</span>
-<span style="color:#0000ff">ち</span>
-<span style="color:#ff0000">ゃ</span>
-<span style="color:#00ff00">ん</span>
-<span style="color:#0000ff">か</span>
-<span style="color:#ff0000">わ</span>
-<span style="color:#00ff00">い</span>
-<span style="color:#0000ff">い</span>
-<span style="color:#ff0000">か</span>
-<span style="color:#00ff00">き</span>
-<span style="color:#0000ff">く</span>
-<span style="color:#ff0000">け</span>
-<span style="color:#00ff00">こ</span>
-<span style="color:#0000ff">！</span>
-<br>
+<div>
+<span style="color:#ff0000"><tt>真</tt></span>
+<span style="color:#00ff00"><tt>姫</tt></span>
+<span style="color:#0000ff"><tt>ち</tt></span>
+<span style="color:#ff0000"><tt>ゃ</tt></span>
+<span style="color:#00ff00"><tt>ん</tt></span>
+</div>                            
+<div>
+<span style="color:#0000ff"><tt>か</tt></span>
+<span style="color:#ff0000"><tt>わ</tt></span>
+<span style="color:#00ff00"><tt>い</tt></span>
+<span style="color:#0000ff"><tt>い</tt></span>
+</div>                            
+<div>                             
+<span style="color:#ff0000"><tt>か</tt></span>
+<span style="color:#00ff00"><tt>き</tt></span>
+<span style="color:#0000ff"><tt>く</tt></span>
+<span style="color:#ff0000"><tt>け</tt></span>
+<span style="color:#00ff00"><tt>こ</tt></span>
+<span style="color:#0000ff"><tt>！</tt></span>
+</div>
 
-<h1><%= @user[:name] %></h1>
-<p><%= @user[:username] %></p>
-<ul>
-    <li>Location : <%= @user[:location] %> </li>
-    <li>About    : <%= @user[:about] %></li>
-</ul>
+<% @hex_matrix.each do |hex_arr| %>
+    <div>
+    <% hex_arr.each do |hex| %>
+        <span style="color:#<%= hex  %>; font-size:9px"><tt>真</tt></span>
+    <% end %>
+    </div>
+<% end %>
