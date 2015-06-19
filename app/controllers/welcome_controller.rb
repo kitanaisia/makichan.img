@@ -9,7 +9,9 @@ class WelcomeController < ApplicationController
     # @user[:location] = "Otonokizaka, Japan"
      
     @hex_matrix = []
+    @chars = ["ま","き","ち","ゃ","ん"]
     
+    # RGB16進数の二次元配列の作成
     img = ImageList.new("image/after.png")
     for y in 0..img.rows
       hex_arr = []
@@ -24,6 +26,5 @@ class WelcomeController < ApplicationController
       @hex_matrix << hex_arr
     end
 
-    # @hex_matrix = ["FF0000", "00FF00", "0000FF"]
   end
 end
