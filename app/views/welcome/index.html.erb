@@ -36,7 +36,11 @@ $(function(){
 </div>
 
 <% i = 0 %>
+<% offset = 0 %>
 <% @hex_matrix.each do |hex_arr| %>
+    <% i = offset %>
+    <% offset += 1 %>
+    <% offset = 0 if offset == 5 %>
     <div style="white-space:nowrap">
     <% hex_arr.each do |hex| %>
         <span style="color:#<%= hex  %>"><tt><%= @chars[i] %></tt></span>
