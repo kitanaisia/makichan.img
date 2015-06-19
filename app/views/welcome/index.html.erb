@@ -39,7 +39,7 @@ $(function(){
 <% @hex_matrix.each do |hex_arr| %>
     <div style="white-space:nowrap">
     <% hex_arr.each do |hex| %>
-        <span style="color:#<%= hex  %>; font-size:9px"><tt><%= @chars[i] %></tt></span>
+        <span style="color:#<%= hex  %>"><tt><%= @chars[i] %></tt></span>
         <% i += 1 %>
         <% i = 0 if i == 5%>
     <% end %>
