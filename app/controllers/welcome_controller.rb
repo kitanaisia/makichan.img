@@ -19,7 +19,8 @@ class WelcomeController < ApplicationController
         src = img.pixel_color(x,y)
     
         rgb = [src.red/256, src.green/256, src.blue/256]
-        hex = rgb.inject(""){|result, elem| result + elem.to_s(16)}
+        # hex = rgb.inject(""){|result, elem| result + elem.to_s(16)}
+        hex = rgb.inject(""){|result, elem| result + sprintf("%02s",elem.to_s(16)).gsub(/ /, "0")}
     
         hex_arr << hex
       end
