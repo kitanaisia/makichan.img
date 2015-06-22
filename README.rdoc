@@ -1,6 +1,6 @@
 == Makichan.img
 
-Drawing image with colored characters "$B$^$-$A$c$s(B".
+Drawing image with colored characters "まきちゃん".
 
 == DEMO
 
