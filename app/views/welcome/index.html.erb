@@ -17,14 +17,10 @@ $(function(){
 <span style="color:#0000ff"><tt>ち</tt></span>
 <span style="color:#ff0000"><tt>ゃ</tt></span>
 <span style="color:#00ff00"><tt>ん</tt></span>
-</div>                            
-<div>
 <span style="color:#0000ff"><tt>か</tt></span>
 <span style="color:#ff0000"><tt>わ</tt></span>
 <span style="color:#00ff00"><tt>い</tt></span>
 <span style="color:#0000ff"><tt>い</tt></span>
-</div>                            
-<div>                             
 <span style="color:#ff0000"><tt>か</tt></span>
 <span style="color:#00ff00"><tt>き</tt></span>
 <span style="color:#0000ff"><tt>く</tt></span>
@@ -32,6 +28,10 @@ $(function(){
 <span style="color:#00ff00"><tt>こ</tt></span>
 <span style="color:#0000ff"><tt>！</tt></span>
 </div>
+
+<%= form_for @source do |f| %>
+    <%= f.submit  %>
+<% end %>
 
 <% i = 0 %>
 <% offset = 0 %>
