@@ -30,6 +30,8 @@ $(function(){
 </div>
 
 <%= form_for @source do |f| %>
+    <%= f.label :uri, "ファイル" %>
+    <%= f.file_field :uri %>
     <%= f.submit  %>
 <% end %>
 
